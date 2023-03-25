@@ -1,0 +1,3 @@
+﻿using LoupGarouConsole;
+
+Controller.Start();
