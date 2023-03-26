@@ -14,7 +14,7 @@ namespace LoupGarouConsole
             //0: villagopis
             //1: loups
             //2: Salvador
-
+            //3: Sa7era
             Game game;
             List<Player> players = new List<Player>();
             var gameRunning = true;
