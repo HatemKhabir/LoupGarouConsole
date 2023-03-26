@@ -16,13 +16,13 @@ namespace LoupGarouConsole
             //2: Salvador
 
             Game game;
-            List<Player> players= new List<Player>();
+            List<Player> players = new List<Player>();
             var gameRunning = true;
-            while(gameRunning)
+            while (gameRunning)
             {
                 //Initializer
                 game = new Game();
-                Console.WriteLine("Game ID: "+ game.GameId);
+                Console.WriteLine("Game ID: " + game.GameId);
                 Console.WriteLine("Adding Players: ");
                 game.AddPlayer(new Player("Khabir"));
                 game.AddPlayer(new Player("Njoura"));
@@ -43,20 +43,20 @@ namespace LoupGarouConsole
                 Console.Clear();
 
 
-                //Game starts
+                //Night starts
 
                 game.SalvaorTurn();
-                //game.SalvaorProtection(i-1);
-                //gameRunning = false;
+                Console.Clear();
+                game.loupsTurn();
+
+                //Day starts ,  updates 
+
+                game.dayUpdates();
+
+                gameRunning = false;
             }
-            
+
         }
-        public static int GetChoiceFromConsole()
-        {
-            Console.Write("Please enter a number:");
-            string? input = Console.ReadLine();
-            int number = Convert.ToInt32(input);
-            return number;
-        }
+
     }
 }
